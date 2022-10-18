@@ -46,5 +46,37 @@ public class Main {
         return talking && (hour < 7 || hour > 20);
     }
 
+    public boolean makes10(int a, int b) {
+        return (a == 10 || b == 10) || a + b == 10;
+    }
+
+    public boolean nearHundred(int n) {
+        return Math.abs(100 - n) <= 10 || Math.abs(200 - n) <= 10;
+    }
+
+    public boolean posNeg(int a, int b, boolean negative) {
+        if (a < 0 && b < 0 && negative) {
+            return true;
+        }
+        if (!negative) {
+            if ((a > 0 && b < 0) || (a < 0 && b > 0)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public String notString(String str){
+        return str.startsWith("not") ? str : "not "+str;
+    }
+
+    public String notString2(String str){
+        if (str.startsWith("not")) {
+            return str;
+        }
+        return "not" + str;
+    }
+
+
 
 }
