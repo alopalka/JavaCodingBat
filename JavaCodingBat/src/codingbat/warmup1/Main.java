@@ -66,17 +66,32 @@ public class Main {
         return false;
     }
 
-    public String notString(String str){
-        return str.startsWith("not") ? str : "not "+str;
+    public String notString(String str) {
+        return str.startsWith("not") ? str : "not " + str;
     }
 
-    public String notString2(String str){
+    public String notString2(String str) {
         if (str.startsWith("not")) {
             return str;
         }
         return "not" + str;
     }
 
+    public boolean startHi(String str) {
+        return str.startsWith("hi");
+    }
+
+    public boolean icyHot(int temp1, int temp2) {
+        return temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100;
+    }
+
+    public boolean in1020(int a, int b) {
+        return (a >= 10 && a <= 20 || b >= 10 && b <= 20);
+    }
+
+    public boolean mixStart(String str) {
+        return str.length() > 2 ? str.substring(1, 3).equals("ix") : false;
+    }
 
 
 }

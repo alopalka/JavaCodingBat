@@ -72,5 +72,28 @@ public class Main {
         return counter;
     }
 
+    public int arrayCount9(int[] nums) {
+        int nineCounter = 0;
+        for (int num : nums) {
+            if (num == 9) {
+                nineCounter++;
+            }
+        }
+        return nineCounter;
+    }
+
+    public boolean arrayFront9(int[] nums) {
+        int loopLength = nums.length;
+        if (nums.length > 4) {
+            loopLength = 4;
+        }
+        for (int i = 0; i < loopLength; i++) {
+            if (nums[i] == 9) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }
