@@ -33,4 +33,29 @@ public class Main {
         return map;
     }
 
+    public Map<String, String> topping1(Map<String, String> map) {
+        if (map.containsKey("ice cream")) {
+            map.replace("ice cream", "cherry");
+        }
+        map.put("bread", "butter");
+        return map;
+    }
+
+    public Map<String, String> topping2(Map<String, String> map) {
+        if (map.containsKey("ice cream")) {
+            map.put("yogurt", map.get("ice cream"));
+        }
+        if (map.containsKey("spinach")) {
+            map.replace("spinach", "nuts");
+        }
+        return map;
+    }
+
+    public Map<String, String> topping3(Map<String, String> map) {
+
+        return map;
+    }
+
+
+
 }
