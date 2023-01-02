@@ -62,5 +62,17 @@ public class Main {
         return strings[0] + strings[strings.length - 1];
     }
 
+    public Map<String, Boolean> wordMultiple(String[] strings) {
+        Map<String, Boolean> stringBooleanMap = new HashMap<>();
+        for (String string : strings) {
+            if (stringBooleanMap.containsKey(string)) {
+                stringBooleanMap.put(string, true);
+            } else {
+                stringBooleanMap.put(string, false);
+            }
+        }
+        return stringBooleanMap;
+    }
+
 
 }
