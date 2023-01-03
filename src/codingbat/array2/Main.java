@@ -159,6 +159,37 @@ centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
         }
         return sum == 8;
     }
+/*
+    Given an array of ints, return true if the number of 1's is greater than the number of 4's
 
+    more14([1, 4, 1]) → true
+    more14([1, 4, 1, 4]) → false
+    more14([1, 1]) → true
+    */
+
+
+    public boolean more14(int[] nums) {
+        int oneCounter = 0;
+        int fourCounter = 0;
+        for (int n : nums) {
+            if (n == 1) {
+                oneCounter++;
+            } else if (n == 4) {
+                fourCounter++;
+            }
+        }
+        return oneCounter > fourCounter;
+    }
+
+    /*Given a number n, create and return a new int array of length n, containing the numbers 0, 1, 2, ... n-1. 
+    The given n may be 0, in which case just return a length 0 array. 
+            You do not need a separate if-statement for the length-0 case; the for-loop should naturally execute 0 times in that case, so it just works. 
+    The syntax to make a new int array is: new int[desired_length]   (See also: FizzBuzz Code)
+
+    fizzArray(4) → [0, 1, 2, 3]
+    fizzArray(1) → [0]
+    fizzArray(10) → [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]*/
+    
+    
 
 }
