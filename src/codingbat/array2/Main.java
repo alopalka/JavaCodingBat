@@ -1,5 +1,8 @@
 package codingbat.array2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
     }
@@ -189,7 +192,53 @@ centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
     fizzArray(4) → [0, 1, 2, 3]
     fizzArray(1) → [0]
     fizzArray(10) → [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]*/
-    
-    
+
+    public int[] fizzArray(int n) {
+        if (n == 0) {
+            return new int[0];
+        }
+        int[] list = new int[n];
+        for (int i = 0; i < n; i++) {
+            list[i] = i;
+        }
+        return list;
+    }
+
+//    Given an array of ints, return true if every element is a 1 or a 4.
+//
+//    only14([1, 4, 1, 4]) → true
+//    only14([1, 4, 2, 4]) → false
+//    only14([1, 1]) → true
+
+
+    public boolean only14(int[] nums) {
+        for (int n : nums) {
+            if (n != 1 && n != 4) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /*Given a number n, create and return a new string array of length n, containing the strings "0", "1" "2" .. through n-1. N may be 0, in which case just return a length 0 array.
+    Note: String.valueOf(xxx) will make the String form of most types.
+    The syntax to make a new string array is:
+               new String[desired_length]  (See also: FizzBuzz Code)
+
+    fizzArray2(4) → ["0", "1", "2", "3"]
+    fizzArray2(10) → ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    fizzArray2(2) → ["0", "1"]*/
+
+    public String[] fizzArray2(int n) {
+        if (n == 0) {
+            return new String[0];
+        }
+        String[] array = new String[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = String.valueOf(i);
+        }
+        return array;
+    }
+
 
 }
